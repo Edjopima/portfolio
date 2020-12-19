@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    border-bottom:solid 2px var(--blue);
+    align-items: center;
+    justify-content:space-between;
+    height:80px;
+    width:100%;
+    color:var(--blue);
+}
+
+.header-name {
+    justify-self: flex-start;
+    margin-left: 15px;
+}
+
+.header-options {
+    margin-right: 15px;
+}
+
+.header-text {
+    font-family: 'Roboto';
+    font-weight:400;
+    font-size: 15pt;
+    text-transform: uppercase;
+    margin:15px;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.header-text:hover{
+    cursor: pointer;
+}
