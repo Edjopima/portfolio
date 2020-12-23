@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
 const StyledMainPage = styled.div `
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: 1fr;
-    grid-template-columns:1fr 1fr;
-    height: ${props=>props.height-80+'px'};
-
+    position:absolute;
+    width: 100%;
+    .mainPage{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr;
+        grid-template-columns:1fr 1fr;
+        height: ${props=>props.height-80+'px'};
+    }
     .mainPage-white {
         display: flex;
         flex-direction: column;

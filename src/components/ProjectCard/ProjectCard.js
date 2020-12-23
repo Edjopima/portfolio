@@ -1,10 +1,11 @@
 import React from 'react';
 import StyledProjectCard from './StyledProjectCard'
 import Github from '../../icons/github.svg'
+import { useSelector } from 'react-redux';
 
-const ProjectCard = () =>{
+const ProjectCard = ({colorScheme}) =>{
     return (
-        <StyledProjectCard>
+        <StyledProjectCard colorScheme={colorScheme}>
             <div className='ProjectCard-image'></div>
             <div className='ProjectCard-contentContainer'>
                 <span className='ProjectCard-title'>Project Title</span>

@@ -4,9 +4,9 @@ const StyledProjectCard = styled.div `
     margin-top:2em;
     width: 250px;
     height: 400px;
-    color:var(--blue);
+    color:${props=> props.colorScheme.color};
     transition: all .2s ease-in-out;
-
+    background-color:${props=> props.colorScheme.backgroundColor};
     :hover{
         transform:scale(1.1);
     }
@@ -20,7 +20,7 @@ const StyledProjectCard = styled.div `
     .ProjectCard-contentContainer {
         padding-top:10px;
         height:275px;
-        border: solid 2px var(--blue);
+        border: solid 2px ${props=> props.colorScheme.color};
         border-top:none;
     }
 
@@ -65,7 +65,7 @@ const StyledProjectCard = styled.div `
         align-items:center;
         justify-content:center;
         padding:5px 10px;
-        border:solid 2px var(--blue);
+        border:solid 2px ${props=> props.colorScheme.color};
         font-size:15px;
         font-weight:400;
         text-transform:uppercase;

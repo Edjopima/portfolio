@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
 const StyledContact = styled.div `
-    color:var(--blue);
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    position:absolute;
+    width: 100%;
+    .Contact{
+        color:var(--blue);
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
     .Contact-title {
         margin:12px;
         margin-top:30px;
