@@ -38,5 +38,19 @@ const StyledHeader = styled.div `
     .header-text:hover{
         cursor: pointer;
     }
+
+    @media screen and (max-width: 480px){
+    height:60px;
+    .header-name {
+        padding-left: 0px;
+}
+    .header-options {
+        padding-right: 0px;
+    }
+    .header-text {
+        font-size: 10pt;
+        margin:0 15px
+    }
+    }
 `
 export default StyledHeader;

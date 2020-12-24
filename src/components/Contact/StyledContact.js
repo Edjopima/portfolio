@@ -25,7 +25,8 @@ const StyledContact = styled.div `
         font-size:15px;
         font-weight:200;
         color:var(--blue);
-        padding:10px
+        padding:10px;
+        outline:none;
     }
     .Message {
         height:125px;
@@ -42,6 +43,14 @@ const StyledContact = styled.div `
         font-weight:400;
         text-transform:uppercase;
         transition: all .2s ease-in-out;
+    }
+    .Contact-errorText{
+        color:red;
+        font-size: 20px;
+        font-weight:300;
+        margin:0;
+        padding:0;
+        text-transform:uppercase;
     }
     .Contact-button:hover{
         transform:scale(1.1);
@@ -72,6 +81,51 @@ const StyledContact = styled.div `
     }
     .instagram {
         margin-right: 2px;
+    }
+
+    @media screen and (max-width: 480px){
+    .Contact-title {
+        margin-top:40px;
+        font-size:30px;
+    }
+    .Contact-input{
+        width:220px;
+        height:15px;
+        font-size:12px;
+        color:var(--blue);
+    }
+    .Message {
+        height:115px;
+    }
+    .Contact-button{
+        height:30px;
+        width:120px;
+        font-size: 15px;
+    }
+    .Contact-errorText{
+        font-size: 15px;
+    }
+    .Contact-imageContainer{
+        margin:10px;
+        height:40px;
+        width:auto;
+        align-items: center;
+    }
+    .Contact-image {
+        margin-right: 12px;
+        width:30px;
+        height:30px;
+        transition: all .2s ease-in-out;
+    }
+    .twitter{
+        margin-right: 2px;
+        height:50px;
+        width:50px;
+    }
+    .instagram {
+        margin-right: 2px;
+        padding-left: 10px
+    }
     }
 `
 export default StyledContact;
