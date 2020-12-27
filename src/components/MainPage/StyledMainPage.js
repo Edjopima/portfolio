@@ -59,6 +59,32 @@ const StyledMainPage = styled.div `
         cursor: pointer;
         transform:scale(1.1);
     }
+
+    @media screen and (max-width: 480px){
+    .MainPage{
+        height: ${props=>props.height-60+'px'};
+    }
+    .MainPage-title {
+        font-size:15pt;
+        margin:7px;
+        margin-bottom:0;
+        margin-top:1em;
+    }
+
+    .MainPage-text {
+        font-size:8pt;
+        margin:7px;
+        margin-top:0;
+        padding-bottom:10px;
+    }
+
+    .MainPage-button {
+        padding:8px;
+        font-size:8pt;
+        margin-bottom:200px;
+    }
+
+    }
 `
 
 export default StyledMainPage;

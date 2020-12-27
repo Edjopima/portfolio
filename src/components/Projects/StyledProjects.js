@@ -21,6 +21,26 @@ const StyledProjects = styled.div `
         background-color:${props=>props.colorScheme.backgroundColor};
         padding-bottom:1em;
     }
+    @media screen and (max-width: 480px){
+        .Projects{
+            width:100%;
+            display:flex;
+            justify-content:center;
+            height:${props=> props.height-60 +'px'};
+            background-color:${props=>props.colorScheme.backgroundColor};
+            padding-top:3em;
+        }
+        .Projects-conatiner{
+            max-width: 500px;
+            grid-template-columns: repeat(auto-fill, minmax(50px,150px));
+            grid-template-rows:1fr 1fr;
+            grid-gap: 30px;
+            grid-row-gap:10px;
+            justify-content: center;
+            background-color:${props=>props.colorScheme.backgroundColor};
+            padding-bottom:0em;
+        }
+    }
 `
 
 export default StyledProjects;

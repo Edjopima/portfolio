@@ -79,6 +79,64 @@ const StyledProjectCard = styled.div `
     .ProjectCard-button2 img{
         margin-right:4px;
     }
+    @media screen and (max-width: 480px){
+        margin-top:1em;
+        width: 150px;
+        height: 220px;
+
+        .ProjectCard-image {
+            width:150px;
+            height:80px;
+        }
+
+        .ProjectCard-contentContainer {
+            padding-top:5px;
+            height:140px;
+            border-width:1px;
+        }
+
+        .ProjectCard-title{
+            margin-left:7px;
+            margin-bottom:0px;
+            font-size:10px;
+            font-weight:800;
+            text-transform:uppercase;
+        }
+
+        .ProjectCard-description{
+            margin-top:2px;
+            margin-left:7px;
+            font-size:8px;
+        }
+
+        .ProjectCard-buttonContainer{
+            margin-top:7px;
+            width:130px;
+        }
+
+        .ProjectCard-button1 {
+            margin-left:5px;
+            font-size:8px;
+            margin-right:2px;
+        }
+
+        .ProjectCard-button2 {
+            margin-right:5px;
+            padding:2px 5px;
+            font-size:8px;
+            border-width:1px;
+        }
+
+        .ProjectCard-button2:hover {
+            background-color:var(--blue-fade);
+        }
+
+        .ProjectCard-button2 img{
+            margin-right:2px;
+            height:15px;
+            width:15px;
+        }
+    }
 `
 
 export default StyledProjectCard;

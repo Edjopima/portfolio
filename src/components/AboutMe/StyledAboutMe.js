@@ -70,6 +70,33 @@ const StyledAboutMe = styled.div `
         cursor:pointer;
         transform:scale(1.1);
     }
+    @media screen and (max-width: 480px){
+        .aboutMe{
+            height: ${props=>props.height-60+'px'};
+        }
+        .aboutMe-title {
+            margin-left:10px;
+            font-size:18px;
+        }
+        .aboutMe-text{
+            margin-left:10px;
+            margin-right:15px;
+            font-size:10px;
+        }
+        .aboutMe-buttonContainer{
+            margin-top:15px;
+            margin-left:10px;
+        }
+        .aboutMe-button1{
+            border: solid 2px var(--blue);
+            font-size: 10px;
+            padding: 8px;
+            margin-right:10px;
+        }
+        .aboutMe-button2{
+            font-size: 10px;
+        }
+    }
 `
 
 export default StyledAboutMe;
