@@ -48,7 +48,7 @@ const StyledHeader = styled.div `
         padding-right: 0px;
     }
     .header-text {
-        font-size: 10pt;
+        font-size: 9pt;
         margin:0 15px
     }
     }

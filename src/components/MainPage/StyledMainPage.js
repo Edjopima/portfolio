@@ -62,10 +62,11 @@ const StyledMainPage = styled.div `
 
     @media screen and (max-width: 480px){
     .MainPage{
-        height: ${props=>props.height-60+'px'};
+        height: ${props=>props.height+'px'};
     }
     .MainPage-title {
-        font-size:15pt;
+        padding-top:1em;
+        font-size:14pt;
         margin:7px;
         margin-bottom:0;
         margin-top:1em;
@@ -80,7 +81,7 @@ const StyledMainPage = styled.div `
 
     .MainPage-button {
         padding:8px;
-        font-size:8pt;
+        font-size:6pt;
         margin-bottom:200px;
     }
 
