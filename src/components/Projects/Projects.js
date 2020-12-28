@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import useWindowDimensions from '../../Hooks/useWindowDimensions'
 import StyledProjects from './StyledProjects'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import {useSpring, animated} from 'react-spring'
 import Header from '../Header/Header'
 
-const Projects = ({type}) => {
+const Projects = ({type, projects}) => {
+    console.log(projects);
+    const [projectList,setProjectList] = useState([])
+
+    useEffect(()=>{
+        setProjectList(projects);
+        console.log(projectList);
+    }, [projects]);
     let colorScheme= (type==='iot')?{backgroundColor:'white',color:'var(--blue)'}: {backgroundColor:'var(--blue)',color:'white'};
     const {height} = useWindowDimensions();
     const setAnimationProps = () =>{
@@ -28,9 +35,11 @@ const Projects = ({type}) => {
                 <Header />
                 <div className='Projects'>
                     <div className='Projects-conatiner'>
-                        <ProjectCard colorScheme={colorScheme}/>
-                        <ProjectCard colorScheme={colorScheme}/>
-                        <ProjectCard colorScheme={colorScheme}/>
+                        {projectList.map((item)=>{
+                            console.log(item);
+                            return (<ProjectCard colorScheme={colorScheme} project={item}/>);
+                            }
+                        )}
                     </div>
                 </div>
             </StyledProjects>

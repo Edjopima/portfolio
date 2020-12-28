@@ -34,20 +34,21 @@ const StyledProjectCard = styled.div `
 
     .ProjectCard-description{
         padding:0;
-        margin-top:4px;
+        margin-top:10px;
         margin-left:14px;
         font-size:15px;
         font-weight:400;
+        height:150px;
     }
 
     .ProjectCard-buttonContainer{
         margin-top:15px;
         display:flex;
-        width:250;
+        width:100%;
         height:auto;
         flex-direction:row;
         justify-content:space-around;
-        align-items:center
+        align-items:flex-start;
     }
 
     .ProjectCard-button1 {
@@ -104,7 +105,7 @@ const StyledProjectCard = styled.div `
         }
 
         .ProjectCard-description{
-            margin-top:2px;
+            margin-top:5px;
             margin-left:7px;
             font-size:8px;
         }

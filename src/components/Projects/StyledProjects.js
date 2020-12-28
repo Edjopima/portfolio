@@ -10,6 +10,7 @@ const StyledProjects = styled.div `
         height:${props=> props.height-80 +'px'};
         background-color:${props=>props.colorScheme.backgroundColor};
         padding-top:3em;
+        height:max-content;
     }
     .Projects-conatiner{
         max-width: 1095px;
@@ -20,6 +21,7 @@ const StyledProjects = styled.div `
         justify-content: center;
         background-color:${props=>props.colorScheme.backgroundColor};
         padding-bottom:1em;
+        height:max-content;
     }
     @media screen and (max-width: 480px){
         .Projects{

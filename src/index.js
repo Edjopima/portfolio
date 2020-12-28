@@ -4,13 +4,39 @@ import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom'
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+
+const initialState = {
+  projects: [],
+  iotProjects:[],
+  webProjects:[]
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'SET_PROJECTS':{
+      return {...state, projects:action.payload}
+      }
+    case 'SET_IOT_PROJECTS':
+      return {...state, iotProjects:action.payload}
+    case 'SET_WEB_PROJECTS':
+      return {...state, webProjects:action.payload}
+    default:
+      return state
+  }
+}
+
+const store = createStore(reducer,initialState);
 
 ReactDOM.render(
+  <Provider store={store}>
     <Router>
       <React.StrictMode>
         <App />
       </React.StrictMode>
-    </Router>,
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
