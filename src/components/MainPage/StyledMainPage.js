@@ -6,7 +6,7 @@ const StyledMainPage = styled.div `
     .mainPage{
         display: grid;
         grid-auto-flow: row;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns:1fr 1fr;
         height: ${props=>props.height-80+'px'};
     }
@@ -33,7 +33,7 @@ const StyledMainPage = styled.div `
         text-transform: uppercase;
         margin:14px;
         margin-bottom:0;
-        margin-top:3em;
+        margin-top:6em;
     }
 
     .MainPage-text {
@@ -61,15 +61,12 @@ const StyledMainPage = styled.div `
     }
 
     @media screen and (max-width: 480px){
-    .MainPage{
-        height: ${props=>props.height+'px'};
-    }
     .MainPage-title {
         padding-top:1em;
         font-size:14pt;
         margin:7px;
         margin-bottom:0;
-        margin-top:1em;
+        margin-top:10em;
     }
 
     .MainPage-text {
@@ -82,7 +79,6 @@ const StyledMainPage = styled.div `
     .MainPage-button {
         padding:8px;
         font-size:6pt;
-        margin-bottom:200px;
     }
 
     }

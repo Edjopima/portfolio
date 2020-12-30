@@ -8,17 +8,41 @@ import Header from '../Header/Header';
 import {useSpring, animated} from 'react-spring'
 
 const Contact = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
+    const [messageStatus, setMessageStatus] = useState('Send');
 
     const handleSubmit = () => {
-        if ( email === '' || subject === '' || message === '' ){
+        if ( name === '' || email === '' || subject === '' || message === '' ){
             setError('all fields are required');
         } else{
             setError('');
+            setMessageStatus('Sending...');
+            fetch('https://portfolio-server-nodemailer.herokuapp.com/sendMail', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    name,
+                    email,
+                    subject,
+                    message
+                })
+            })
+            .then(response => response.json())
+            .then(data=>setMessageStatus('message sent'))
+            .catch(error => console.error('error'));
         }
+    }
+
+    const clearMessage = () =>{
+        setEmail('');
+        setName('');
+        setMessage('');
+        setSubject('');
+        setMessageStatus('Send');
     }
 
     const props = useSpring({
@@ -32,11 +56,15 @@ const Contact = () => {
                 <Header/>
                 <div className="Contact">
                     <h1 className='Contact-title'>Contact Me</h1>
-                    <input type="text" placeholder="EMAIL" className="Contact-input" onChange={(event)=>setEmail(event.target.value)} ></input>
-                    <input type="text" placeholder="SUBJECT" className="Contact-input" onChange={(event) => setSubject(event.target.value)} ></input>
-                    <textarea placeholder="MESSAGE" className="Contact-input Message" onChange={(event) => setMessage(event.target.value)} ></textarea>
+                    <input type="text" placeholder="NAME" className="Contact-input" value={name} onChange={(event)=>setName(event.target.value)} ></input>
+                    <input type="text" placeholder="EMAIL" className="Contact-input" value={email} onChange={(event)=>setEmail(event.target.value)} ></input>
+                    <input type="text" placeholder="SUBJECT" className="Contact-input" value={subject} onChange={(event) => setSubject(event.target.value)} ></input>
+                    <textarea placeholder="MESSAGE" className="Contact-input Message" value={message} onChange={(event) => setMessage(event.target.value)} ></textarea>
                     <p className='Contact-errorText'>{error}</p>
-                    <div className='Contact-button' onClick={()=>handleSubmit()}><span>Send</span></div>
+                    <div className='Contact-buttonContainer'>
+                        <div className='Contact-button' onClick={()=>handleSubmit()}><span>{messageStatus}</span></div>
+                        <div className='Contact-button2' onClick={()=>clearMessage()}><span>Clear</span></div>
+                    </div>
                     <div className='Contact-imageContainer'>
                         <a href='https://www.instagram.com/edjopima/'> <img className="Contact-image instagram" src={Instagram} alt="Instagram"/></a>
                         <a href='https://twitter.com/edjopima'> <img className="Contact-image twitter" src={Twitter} alt="Twitter"/></a>

@@ -59,6 +59,11 @@ const StyledProjectCard = styled.div `
         cursor:pointer;
     }
 
+    .ProjectCard-link{
+        color:${props=> props.colorScheme.color};
+        text-decoration:none;
+    }
+
     .ProjectCard-button2 {
         margin-right:10px;
         display:flex;
@@ -108,6 +113,7 @@ const StyledProjectCard = styled.div `
             margin-top:5px;
             margin-left:7px;
             font-size:8px;
+            height:75px;
         }
 
         .ProjectCard-buttonContainer{

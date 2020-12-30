@@ -31,6 +31,8 @@ const StyledProjects = styled.div `
             height:${props=> props.height-60 +'px'};
             background-color:${props=>props.colorScheme.backgroundColor};
             padding-top:3em;
+            padding-bottom:1em;
+            height:max-content;
         }
         .Projects-conatiner{
             max-width: 500px;

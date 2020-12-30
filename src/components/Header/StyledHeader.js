@@ -40,7 +40,6 @@ const StyledHeader = styled.div `
     }
 
     @media screen and (max-width: 480px){
-    height:60px;
     .header-name {
         padding-left: 0px;
 }

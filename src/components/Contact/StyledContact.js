@@ -12,7 +12,7 @@ const StyledContact = styled.div `
     }
     .Contact-title {
         margin:12px;
-        margin-top:30px;
+        margin-top:5px;
         font-size:45px;
         font-weight:900;
         text-transform:uppercase;
@@ -31,8 +31,12 @@ const StyledContact = styled.div `
     .Message {
         height:125px;
     }
+    .Contact-buttonContainer{
+        display: flex;
+        flex-direction: row;
+    }
     .Contact-button{
-        margin:12px;
+        margin:8px 10px;
         display: flex;
         justify-content:center;
         align-items: center;
@@ -44,6 +48,18 @@ const StyledContact = styled.div `
         text-transform:uppercase;
         transition: all .2s ease-in-out;
     }
+    .Contact-button2{
+        height:40px;
+        width:150px;
+        margin:8px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        font-size: 20px;
+        text-transform: uppercase;
+        transition: all .2s ease-in-out;
+    }
     .Contact-errorText{
         color:red;
         font-size: 20px;
@@ -52,7 +68,7 @@ const StyledContact = styled.div `
         padding:0;
         text-transform:uppercase;
     }
-    .Contact-button:hover{
+    .Contact-button:hover, .Contact-button2:hover{
         transform:scale(1.1);
         cursor:pointer;
     }
@@ -98,6 +114,13 @@ const StyledContact = styled.div `
         height:115px;
     }
     .Contact-button{
+        margin:8px 0px;
+        height:30px;
+        width:120px;
+        font-size: 15px;
+    }
+    .Contact-button2{
+        margin:8px 0px;
         height:30px;
         width:120px;
         font-size: 15px;

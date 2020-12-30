@@ -3,6 +3,7 @@ import StyledAboutMe from './StyledAboutMe';
 import useWindowDimensions from '../../Hooks/useWindowDimensions'
 import {useHistory} from 'react-router-dom'
 import Header from '../Header/Header'
+import Profile from '../../images/profile.jpg'
 
 const AboutMe = () =>{
     const {height}= useWindowDimensions();
@@ -16,7 +17,12 @@ const AboutMe = () =>{
             <div className='aboutMe'>
                 <div className='aboutMe-white'>
                     <h1 className='aboutMe-title'>Hi, i'm <span className='aboutMe-name'>eduardo piña</span></h1>
-                    <span className='aboutMe-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                    <span className='aboutMe-text'>
+                    I'm a venezuelan electronic engineer, pasionate for tecnology, the utomation and the Internet of Things.
+                    I has experience with Javascript using NodeJS, ReactJS, React Native and Electron JS;
+                    also i've worked with Python, C and C++ in Electronics and Internet of Things projects
+                    using Microcontrollers like arduino an PIC and single boards computers like raspberry pi.
+                    </span>
                     <div className='aboutMe-buttonContainer'>
                         <div className='aboutMe-button1' onClick={()=>changePage('/projects')}>
                             <span>Projects</span>
@@ -26,7 +32,9 @@ const AboutMe = () =>{
                         </div>
                     </div>
                 </div>
-                <div className='aboutMe-blue'></div>
+                <div className='aboutMe-blue'>
+                    <img src={Profile} alt='profile' className='aboutMe-profilePic'/>
+                </div>
             </div>
         </StyledAboutMe>
     )

@@ -21,8 +21,14 @@ const StyledAboutMe = styled.div `
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         color:white;
         background-color:var(--blue);
+    }
+    .aboutMe-profilePic{
+        width:400px;
+        height: 400px;
+        border:solid 10px white;
     }
     .aboutMe-title {
         margin-left:20px;
@@ -96,6 +102,11 @@ const StyledAboutMe = styled.div `
         .aboutMe-button2{
             font-size: 10px;
         }
+        .aboutMe-profilePic{
+        width:150px;
+        height: 150px;
+        border:solid 5px white;
+    }
     }
 `
 
