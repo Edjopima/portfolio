@@ -7,6 +7,7 @@ import inpimacaAppCover from '../../images/inpimaca-app.png'
 import inpimacaMobileCover from '../../images/inpimacaMobileApp.jpg'
 import grayBackground from '../../images/gray.jpg'
 import portfolioCover from '../../images/portfolio.png'
+import humiditySensorCover from '../../images/HumiditySensor.png'
 
 const setImageSrc = (project) => {
     switch (project.name) {
@@ -18,6 +19,8 @@ const setImageSrc = (project) => {
             return inpimacaMobileCover
         case 'portfolio':
             return portfolioCover
+        case 'humidity-sensor':
+            return humiditySensorCover
         default:
             return grayBackground
     }
