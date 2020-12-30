@@ -23,7 +23,16 @@ const StyledProjectCard = styled.div `
         border: solid 2px ${props=> props.colorScheme.color};
         border-top:none;
     }
-
+    .ProjectCard-titleContainer{
+        height:auto;
+        padding-left:14px;
+    }
+    .ProjectCard-titleSmall{
+        margin-bottom:0px;
+        font-size:20px;
+        font-weight:800;
+        text-transform:uppercase;
+    }
     .ProjectCard-title{
         margin-left:14px;
         margin-bottom:0px;
@@ -39,6 +48,14 @@ const StyledProjectCard = styled.div `
         font-size:15px;
         font-weight:400;
         height:150px;
+    }
+    .ProjectCard-descriptionSmall{
+        padding:0;
+        margin-top:10px;
+        margin-left:14px;
+        font-size:15px;
+        font-weight:400;
+        height:110px;
     }
 
     .ProjectCard-buttonContainer{
@@ -108,12 +125,29 @@ const StyledProjectCard = styled.div `
             font-weight:800;
             text-transform:uppercase;
         }
+        .ProjectCard-titleContainer{
+            height:auto;
+            padding-left:7px;
+        }
+        .ProjectCard-titleSmall{
+            margin-bottom:0px;
+            font-size:10px;
+            font-weight:800;
+            text-transform:uppercase;
+        }
 
         .ProjectCard-description{
             margin-top:5px;
             margin-left:7px;
             font-size:8px;
             height:75px;
+        }
+        .ProjectCard-descriptionSmall{
+            padding:0;
+            margin-top:5px;
+            margin-left:7px;
+            font-size:8px;
+            height:55px;
         }
 
         .ProjectCard-buttonContainer{

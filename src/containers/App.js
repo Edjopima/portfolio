@@ -8,6 +8,7 @@ import Projects from '../components/Projects/Projects';
 import Contact from '../components/Contact/Contact';
 import AboutMe from '../components/AboutMe/AboutMe';
 import {useSelector,useDispatch} from 'react-redux'
+import ShotingTrainingSystem from '../components/ShotingTrainingSystem/ShotingTrainingSystem';
 
 const App = () => {
   const projects = useSelector(state=>state.projects);
@@ -60,6 +61,9 @@ const App = () => {
                 <Switch location={item}>
                   <Route path="/iotprojects">
                       <Projects type='iot' projects={filterIotProjects(projects)}/>
+                  </Route>
+                  <Route path='/shootingTrainingSystem'>
+                    <ShotingTrainingSystem/>
                   </Route>
                   <Route path="/contact">
                       <Contact />
