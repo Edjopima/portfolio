@@ -18,10 +18,10 @@ const AboutMe = () =>{
                 <div className='aboutMe-white'>
                     <h1 className='aboutMe-title'>Hi, i'm <span className='aboutMe-name'>eduardo piña</span></h1>
                     <span className='aboutMe-text'>
-                    I'm a venezuelan electronic engineer, pasionate for tecnology, the utomation and the Internet of Things.
-                    I has experience with Javascript using NodeJS, ReactJS, React Native and Electron JS;
-                    also i've worked with Python, C and C++ in Electronics and Internet of Things projects
-                    using Microcontrollers like arduino an PIC and single boards computers like raspberry pi.
+                    I'm a venezuelan electronic engineer, pasionate for technology, the automation and the Internet of Things.
+                    I have experience with Javascript using NodeJS, ReactJS, React Native and Electron JS;
+                    also, i have worked with Python, C and C++ in Electronics and Internet of Things projects
+                    using Microcontrollers like arduino, PIC and single boards computers like raspberry pi.
                     </span>
                     <div className='aboutMe-buttonContainer'>
                         <div className='aboutMe-button1' onClick={()=>changePage('/projects')}>
