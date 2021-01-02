@@ -24,10 +24,10 @@ const AboutMe = () =>{
                     using Microcontrollers like arduino, PIC and single boards computers like raspberry pi.
                     </span>
                     <div className='aboutMe-buttonContainer'>
-                        <div className='aboutMe-button1' onClick={()=>changePage('/projects')}>
+                        <div className='aboutMe-button1' onClick={()=>changePage('/portfolio/projects')}>
                             <span>Projects</span>
                         </div>
-                        <div className='aboutMe-button2' onClick={()=>changePage('/contact')}>
+                        <div className='aboutMe-button2' onClick={()=>changePage('/portfolio/contact')}>
                             <span>contact me</span>
                         </div>
                     </div>

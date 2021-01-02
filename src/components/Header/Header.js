@@ -12,7 +12,7 @@ const Header = () => {
 
     const setComponentProps = (location) =>{
         switch (location) {
-            case '/':
+            case '/portfolio':
                 return({
                     colorScheme:{
                         backgroundColor1:'white',
@@ -25,11 +25,11 @@ const Header = () => {
                         text2:'contact'
                     },
                     routes:{
-                        route1:'/about',
-                        route2:'/contact'
+                        route1:'/portfolio/about',
+                        route2:'/portfolio/contact'
                     }
                 });
-            case '/iotprojects':
+            case '/portfolio/iotprojects':
                 return({
                     colorScheme:{
                         backgroundColor1:'white',
@@ -42,11 +42,11 @@ const Header = () => {
                         text2:'contact'
                     },
                     routes:{
-                        route1:'/about',
-                        route2:'/contact'
+                        route1:'/portfolio/about',
+                        route2:'/portfolio/contact'
                     }
                 });
-            case '/webprojects':
+            case '/portfolio/webprojects':
                 return({
                     colorScheme:{
                         backgroundColor1:'var(--blue)',
@@ -59,11 +59,11 @@ const Header = () => {
                         text2:'contact'
                     },
                     routes:{
-                        route1:'/about',
-                        route2:'/contact'
+                        route1:'/portfolio/about',
+                        route2:'/portfolio/contact'
                     }
                 });
-            case '/about':
+            case '/portfolio/about':
                 return({
                     colorScheme:{
                         backgroundColor1:'white',
@@ -76,11 +76,11 @@ const Header = () => {
                         text2:'contact'
                     },
                     routes:{
-                        route1:'/',
-                        route2:'/contact'
+                        route1:'/portfolio',
+                        route2:'/portfolio/contact'
                     }
                 });
-            case '/contact':
+            case '/portfolio/contact':
             return({
                 colorScheme:{
                     backgroundColor1:'white',
@@ -93,8 +93,8 @@ const Header = () => {
                     text2:'about me'
                 },
                 routes:{
-                    route1:'/',
-                    route2:'/about'
+                    route1:'/portfolio',
+                    route2:'/portfolio/about'
                 }
             });
             default:
@@ -110,8 +110,8 @@ const Header = () => {
                         text2:'contact'
                     },
                     routes:{
-                        route1:'/about',
-                        route2:'/contact'
+                        route1:'/portfolio/about',
+                        route2:'/portfolio/contact'
                     }
                 });
         }
@@ -122,7 +122,7 @@ const Header = () => {
     return (
             <StyledHeader colorScheme={colorScheme}>
                 <div className='header-name' >
-                    <span className='header-text' onClick={()=>changePage('/')}>Eduardo Piña</span>
+                    <span className='header-text' onClick={()=>changePage('/portfolio')}>Eduardo Piña</span>
                 </div>
                 <div className='header-options'>
                     <span className='header-text' onClick={()=>changePage(routes.route1)}>{text.text1}</span>

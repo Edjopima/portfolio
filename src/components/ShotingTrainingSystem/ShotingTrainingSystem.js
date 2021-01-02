@@ -26,10 +26,10 @@ const ShotingTrainingSystem = () =>{
                     Also has the microcontroller in charge to read the receptors message and calculate the health of the user in the simulation. Also take count of the "bullet" used. And send the training data through bluetooth.
                     </span>
                     <div className='ShotingTrainingSystem-buttonContainer'>
-                        <div className='ShotingTrainingSystem-button1' onClick={()=>changePage('/iotprojects')}>
+                        <div className='ShotingTrainingSystem-button1' onClick={()=>changePage('/portfolio/iotprojects')}>
                             <span>Back</span>
                         </div>
-                        <div className='ShotingTrainingSystem-button2' onClick={()=>changePage('/contact')}>
+                        <div className='ShotingTrainingSystem-button2' onClick={()=>changePage('/portfolio/contact')}>
                             <span>contact me</span>
                         </div>
                     </div>

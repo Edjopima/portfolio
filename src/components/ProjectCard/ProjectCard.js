@@ -50,7 +50,7 @@ const ProjectCard = ({colorScheme, project}) =>{
                     </div>
                     <p className='ProjectCard-descriptionSmall'>{project.description.slice(5,-1)}</p>
                     <div className='ProjectCard-buttonContainer'>
-                        <div className='ProjectCard-button2' onClick={()=>changePage('/shootingTrainingSystem')}>
+                        <div className='ProjectCard-button2' onClick={()=>changePage('/portfolio/shootingTrainingSystem')}>
                             <span className='ProjectCard-buttonText'>More</span>
                         </div>
                     </div>
