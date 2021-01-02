@@ -62,19 +62,19 @@ const App = () => {
                   <Route path="/iotprojects">
                       <Projects type='iot' projects={filterIotProjects(projects)}/>
                   </Route>
-                  <Route path='/shootingTrainingSystem'>
+                  <Route path='/portfolio/shootingTrainingSystem'>
                     <ShotingTrainingSystem/>
                   </Route>
-                  <Route path="/contact">
+                  <Route path="/portfolio/contact">
                       <Contact />
                   </Route>
-                  <Route path="/about">
+                  <Route path="/portfolio/about">
                       <AboutMe />
                   </Route>
-                  <Route path='/webprojects'>
+                  <Route path='/portfolio/webprojects'>
                     <Projects type='web' projects={filterWebProjects(projects)}/>
                   </Route>
-                  <Route path="/">
+                  <Route path="/portfolio">
                       <MainPage />
                   </Route>
                 </Switch>
