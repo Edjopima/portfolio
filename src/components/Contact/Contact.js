@@ -66,10 +66,10 @@ const Contact = () => {
                         <div className='Contact-button2' onClick={()=>clearMessage()}><span>Clear</span></div>
                     </div>
                     <div className='Contact-imageContainer'>
-                        <a href='https://www.instagram.com/edjopima/'> <img className="Contact-image instagram" src={Instagram} alt="Instagram"/></a>
-                        <a href='https://twitter.com/edjopima'> <img className="Contact-image twitter" src={Twitter} alt="Twitter"/></a>
-                        <a href='https://www.linkedin.com/in/edjopima/'> <img className="Contact-image" src={LinkedIn} alt="LinkedIn"/></a>
-                        <a href='https://github.com/edjopima'> <img className="Contact-image" src={GitHub} alt="GitHub"/></a>
+                        <a href='https://www.instagram.com/edjopima/'> <img className="Contact-image instagram" src={Instagram} alt="Instagram" target="_blank" rel="noreferrer"/></a>
+                        <a href='https://twitter.com/edjopima'> <img className="Contact-image twitter" src={Twitter} alt="Twitter" target="_blank" rel="noreferrer"/></a>
+                        <a href='https://www.linkedin.com/in/edjopima/'> <img className="Contact-image" src={LinkedIn} alt="LinkedIn" target="_blank" rel="noreferrer"/></a>
+                        <a href='https://github.com/edjopima'> <img className="Contact-image" src={GitHub} alt="GitHub" target="_blank" rel="noreferrer"/></a>
                     </div>
                 </div>
             </StyledContact>

@@ -67,7 +67,7 @@ const ProjectCard = ({colorScheme, project}) =>{
                 <span className='ProjectCard-title'>{project.name}</span>
                 <p className='ProjectCard-description'>{project.description.slice(5,-1)}</p>
                 <div className='ProjectCard-buttonContainer'>
-                    <a href={project.html_url} className='ProjectCard-link'>
+                    <a href={project.html_url} className='ProjectCard-link' target="_blank" rel="noreferrer">
                     <div className='ProjectCard-button2'>
                         <img src={(colorScheme.backgroundColor==='white')?Github:GithubWhite} alt='Github Logo' width='25px' height='25px' color='var(--blue)'/>
                         <span className='ProjectCard-buttonText'>View on Github</span>
