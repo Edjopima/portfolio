@@ -4,6 +4,7 @@ import StyledProjects from './StyledProjects'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import {useSpring, animated} from 'react-spring'
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer';
 
 const Projects = ({type, projects}) => {
     console.log(projects);
@@ -59,6 +60,7 @@ const Projects = ({type, projects}) => {
                         <span></span>}
                     </div>
                 </div>
+                <Footer/>
             </StyledProjects>
         </animated.div>
 

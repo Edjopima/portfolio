@@ -1,15 +1,22 @@
 import React,{useContext} from 'react';
-import {useHistory} from 'react-router-dom';
+import styled from 'styled-components'
 import {__RouterContext} from 'react-router'
-import StyledHeader from './StyledHeader';
 
-const Header = () => {
-    const {location} = useContext(__RouterContext);
-    const history = useHistory();
-    const changePage = (page) => {
-        history.push(page);
-    }
+const StyledFooter = styled.div`
+    font-size:0.8em;
+    color:${props=>props.colorScheme.color1};
+    margin:0;
+    margin-bottom:10px;
+    padding:0;
+    padding-top:2px;
+    text-align:center;
+    border-top:1px solid ${props=>props.colorScheme.color1};
+    width:100%;
+    background-color:${props=>props.colorScheme.backgroundColor1};
+    border-bottom:2px solid ${props=>props.colorScheme.backgroundColor1};
+`;
 
+const Footer = () => {
     const setComponentProps = (location) =>{
         switch (location) {
             case '':
@@ -117,19 +124,15 @@ const Header = () => {
         }
     }
 
-    const {text,routes,colorScheme} = setComponentProps(location.pathname)
+    const {location} = useContext(__RouterContext);
+
+    const {colorScheme} = setComponentProps(location.pathname)
 
     return (
-            <StyledHeader colorScheme={colorScheme}>
-                <div className='header-name' >
-                    <span className='header-text' onClick={()=>changePage('/')}>Eduardo Piña</span>
-                </div>
-                <div className='header-options'>
-                    <span className='header-text' onClick={()=>changePage(routes.route1)}>{text.text1}</span>
-                    <span className='header-text' onClick={()=>changePage(routes.route2)}>{text.text2}</span>
-                </div>
-            </StyledHeader>
+        <StyledFooter colorScheme={colorScheme}>
+            Desarrollado por Eduardo Piña, 2021.
+        </StyledFooter>
     );
-};
+}
 
-export default Header;
+export default Footer;

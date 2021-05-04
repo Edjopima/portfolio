@@ -20,7 +20,7 @@ const StyledHeader = styled.div `
         padding-right: 15px;
         width: 50%;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         height: 100%;
         align-items: center;
         background: ${props=>props.colorScheme.backgroundColor2};

@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom'
 import Header from '../Header/Header'
 import weapon from '../../images/weapon.jpg'
 import weapon2 from '../../images/weapon2.jpg'
+import Footer from '../Footer/Footer';
 
 const ShotingTrainingSystem = () =>{
     const {height}= useWindowDimensions();
@@ -26,10 +27,10 @@ const ShotingTrainingSystem = () =>{
                     Also has the microcontroller in charge to read the receptors message and calculate the health of the user in the simulation. Also take count of the "bullet" used. And send the training data through bluetooth.
                     </span>
                     <div className='ShotingTrainingSystem-buttonContainer'>
-                        <div className='ShotingTrainingSystem-button1' onClick={()=>changePage('/portfolio/iotprojects')}>
+                        <div className='ShotingTrainingSystem-button1' onClick={()=>changePage('/iotprojects')}>
                             <span>Back</span>
                         </div>
-                        <div className='ShotingTrainingSystem-button2' onClick={()=>changePage('/portfolio/contact')}>
+                        <div className='ShotingTrainingSystem-button2' onClick={()=>changePage('/contact')}>
                             <span>contact me</span>
                         </div>
                     </div>
@@ -39,6 +40,7 @@ const ShotingTrainingSystem = () =>{
                     <img src={weapon2} alt='profile' className='ShotingTrainingSystem-Pic2'/>
                 </div>
             </div>
+            <Footer/>
         </StyledShotingTrainingSystem>
     )
 }

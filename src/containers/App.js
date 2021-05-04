@@ -59,22 +59,22 @@ const App = () => {
           {transitionsLeftToRight.map(({item,props,key})=>(
               <animated.div key={key} style={props}>
                 <Switch location={item}>
-                  <Route path="/portfolio/iotprojects">
+                  <Route path="/iotprojects">
                       <Projects type='iot' projects={filterIotProjects(projects)}/>
                   </Route>
-                  <Route path='/portfolio/shootingTrainingSystem'>
+                  <Route path='/shootingTrainingSystem'>
                     <ShotingTrainingSystem/>
                   </Route>
-                  <Route path="/portfolio/contact">
+                  <Route path="/contact">
                       <Contact />
                   </Route>
-                  <Route path="/portfolio/about">
+                  <Route path="/about">
                       <AboutMe />
                   </Route>
-                  <Route path='/portfolio/webprojects'>
+                  <Route path='/webprojects'>
                     <Projects type='web' projects={filterWebProjects(projects)}/>
                   </Route>
-                  <Route path="/portfolio">
+                  <Route path="/">
                       <MainPage />
                   </Route>
                 </Switch>

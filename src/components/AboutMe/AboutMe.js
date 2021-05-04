@@ -4,6 +4,7 @@ import useWindowDimensions from '../../Hooks/useWindowDimensions'
 import {useHistory} from 'react-router-dom'
 import Header from '../Header/Header'
 import Profile from '../../images/profile.jpg'
+import Footer from '../Footer/Footer';
 
 const AboutMe = () =>{
     const {height}= useWindowDimensions();
@@ -24,10 +25,10 @@ const AboutMe = () =>{
                     using Microcontrollers like arduino, PIC and single boards computers like raspberry pi.
                     </span>
                     <div className='aboutMe-buttonContainer'>
-                        <div className='aboutMe-button1' onClick={()=>changePage('/portfolio/projects')}>
+                        <div className='aboutMe-button1' onClick={()=>changePage('/projects')}>
                             <span>Projects</span>
                         </div>
-                        <div className='aboutMe-button2' onClick={()=>changePage('/portfolio/contact')}>
+                        <div className='aboutMe-button2' onClick={()=>changePage('/contact')}>
                             <span>contact me</span>
                         </div>
                     </div>
@@ -36,6 +37,7 @@ const AboutMe = () =>{
                     <img src={Profile} alt='profile' className='aboutMe-profilePic'/>
                 </div>
             </div>
+            <Footer/>
         </StyledAboutMe>
     )
 }

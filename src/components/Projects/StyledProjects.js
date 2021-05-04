@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const StyledProjects = styled.div `
     position:absolute;
     width: 100%;
+    background:${props=>props.colorScheme.backgroundColor};
     .Projects{
         width:100%;
         display:flex;

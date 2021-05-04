@@ -6,6 +6,7 @@ import LinkedIn from '../../icons/linkedin.svg'
 import Twitter from '../../icons/Twitter.svg'
 import Header from '../Header/Header';
 import {useSpring, animated} from 'react-spring'
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -72,6 +73,9 @@ const Contact = () => {
                         <a href='https://github.com/edjopima'> <img className="Contact-image" src={GitHub} alt="GitHub" target="_blank" rel="noreferrer"/></a>
                     </div>
                 </div>
+                <br></br>
+                <br></br>
+                <Footer/>
             </StyledContact>
         </animated.div>
     )
