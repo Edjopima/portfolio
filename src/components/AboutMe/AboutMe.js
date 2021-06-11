@@ -19,7 +19,7 @@ const AboutMe = () =>{
                 <div className='aboutMe-white'>
                     <h1 className='aboutMe-title'>Hi, i'm <span className='aboutMe-name'>eduardo piña</span></h1>
                     <span className='aboutMe-text'>
-                    I'm a venezuelan electronic engineer, pasionate for technology, the automation and the Internet of Things.
+                    I'm an electronic engineer, pasionate for technology, the automation and the Internet of Things.
                     I have experience with Javascript using NodeJS, ReactJS, React Native and Electron JS;
                     also, i have worked with Python, C and C++ in Electronics and Internet of Things projects
                     using Microcontrollers like arduino, PIC and single boards computers like raspberry pi.
