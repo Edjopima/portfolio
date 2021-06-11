@@ -130,7 +130,7 @@ const Footer = () => {
 
     return (
         <StyledFooter colorScheme={colorScheme}>
-            Desarrollado por Eduardo Piña, 2021.
+            Developed by Eduardo Piña, 2021.
         </StyledFooter>
     );
 }
