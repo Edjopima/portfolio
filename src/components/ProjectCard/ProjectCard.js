@@ -32,7 +32,6 @@ const setImageSrc = (project) => {
 
 const ProjectCard = ({colorScheme, project}) =>{
     const history = useHistory();
-
     const changePage = (route) => {
         history.push(route)
     }
@@ -64,7 +63,7 @@ const ProjectCard = ({colorScheme, project}) =>{
                 <img src={imageSrc} alt={project.name} className='ProjectCard-image'/>
             </div>
             <div className='ProjectCard-contentContainer'>
-                <span className='ProjectCard-title'>{project.name}</span>
+                <span className='ProjectCard-title'>{project.name==='retoFrontendNuweHackaton'?'Nuwe Hackathon': project.name}</span>
                 <p className='ProjectCard-description'>{project.description.slice(5,-1)}</p>
                 <div className='ProjectCard-buttonContainer'>
                     <a href={project.html_url} className='ProjectCard-link' target="_blank" rel="noreferrer">

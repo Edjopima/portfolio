@@ -7,7 +7,6 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer';
 
 const Projects = ({type, projects}) => {
-    console.log(projects);
     const [projectList,setProjectList] = useState([])
 
     useEffect(()=>{
@@ -50,7 +49,6 @@ const Projects = ({type, projects}) => {
                 <div className='Projects'>
                     <div className='Projects-conatiner'>
                         {projectList.map((item)=>{
-                            console.log(item);
                             return (<ProjectCard colorScheme={colorScheme} project={item}/>);
                             }
                         )}
