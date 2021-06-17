@@ -8,7 +8,7 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 const initialState = {
-  projects: [],
+  projects: [{title:'',description:'Example description'}],
   iotProjects:[],
   webProjects:[]
 };

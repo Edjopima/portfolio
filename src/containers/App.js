@@ -13,7 +13,6 @@ import ShotingTrainingSystem from '../components/ShotingTrainingSystem/ShotingTr
 const App = () => {
   const projects = useSelector(state=>state.projects);
   const dispatch = useDispatch();
-  console.log(projects)
   useEffect(()=>{
     fetch('https://api.github.com/users/Edjopima/repos')
       .then(response=>response.json())
@@ -29,7 +28,7 @@ const App = () => {
   const filterIotProjects = (projects) => {
     let iotProjects = [];
     projects.forEach(project=>{
-      if (project.description.slice(0,5)=== '[iot]'){
+      if (project.description && project.description.slice(0,5)=== '[iot]'){
         iotProjects.push(project);
       }
     })
@@ -39,7 +38,7 @@ const App = () => {
   const filterWebProjects = (projects) => {
     let webProjects = [];
     projects.forEach(project=>{
-      if (project.description.slice(0,5)=== '[web]'){
+      if (project.description && project.description.slice(0,5)=== '[web]'){
         webProjects.push(project);
       }
     })
