@@ -5,6 +5,7 @@ const StyledContact = styled.div `
     width: 100%;
     .Contact{
         color:var(--blue);
+        height:85vh;
         display: flex;
         flex-direction: column;
         justify-content:center;
